@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercearia Online</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<div id="toast-container"></div>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>🛒 Mercearia Online</h2>
+    </div>
+
+    <div class="pesquisa">
+        <input
+        type="text"
+        id="pesquisa"
+        placeholder="Pesquisar produto...">
+    </div>
+
+    <div class="icone-carrinho">
+
+        <button id="abrirCarrinho">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="contadorCarrinho">0</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- SECT DO BANNER-->
+
+<section class="banner">
+
+    <div class="banner-bg"></div>
+
+    <div class="banner-container">
+
+        <div class="banner-slide ativo">
+            <h1>Ofertas da Semana 🛒</h1>
+            <p>Descontos imperdíveis em vários produtos</p>
+        </div>
+
+        <div class="banner-slide">
+            <h1>Entrega Rápida 🚚</h1>
+            <p>Receba suas compras em minutos</p>
+        </div>
+
+        <div class="banner-slide">
+            <h1>Mercado Completo 🏪</h1>
+            <p>Tudo em um só lugar</p>
+        </div>
+
+    </div>
+
+    <button class="banner-btn prev">‹</button>
+    <button class="banner-btn next">›</button>
+
+    <div class="banner-dots"></div>
+
+</section>
+
+
+
+<section class="categorias">
+
+    <button class="categoria ativa" data-categoria="Todos">
+        Todos
+    </button>
+
+    <button class="categoria" data-categoria="Mercearia">
+        Mercearia
+    </button>
+
+    <button class="categoria" data-categoria="Bebidas">
+        Bebidas
+    </button>
+
+    <button class="categoria" data-categoria="Hortifruti">
+        Hortifruti
+    </button>
+
+    <button class="categoria" data-categoria="Limpeza">
+        Limpeza
+    </button>
+
+    <button class="categoria" data-categoria="Higiene">
+        Higiene
+    </button>
+
+</section>
+
+<main>
+
+    <div id="produtos" class="produtos">
+
+    </div>
+
+</main>
+
+<div id="carrinho" class="carrinho">
+
+    <div class="topo-carrinho">
+
+        <h2>Carrinho</h2>
+
+        <button id="fecharCarrinho">
+            ✖
+        </button>
+
+    </div>
+
+    <div id="itensCarrinho">
+
+    </div>
+
+    <div class="rodape-carrinho">
+
+        <h3>
+            Total: R$
+            <span id="totalCarrinho">0.00</span>
+        </h3>
+
+        <button id="limparCarrinho">
+            Limpar Carrinho
+        </button>
+
+        <button id="finalizarPedido">
+            Finalizar Pedido
+        </button>
+
+    </div>
+
+</div>
+
+<div id="overlay"></div>
+
+<script src="produtos.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
